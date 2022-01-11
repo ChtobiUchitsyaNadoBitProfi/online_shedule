@@ -1,24 +1,7 @@
-# README
+добавить тесты и верификацию пароля админа
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+кнопка редактирования расписания по умолчанию скрыта
 
-Things you may want to cover:
+если пароль админа введен верно то кнопка редактирования должна появляться
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+если к индексовой странице дописать роут /new открывается страница создания объекта
