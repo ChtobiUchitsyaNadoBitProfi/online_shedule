@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe ItemsController, type: :controller do
@@ -23,7 +25,7 @@ RSpec.describe ItemsController, type: :controller do
     before { get :index }
 
     it 'returns items' do
-      is_expected.to render_template :index
+      expect(subject).to render_template :index
       expect(assigns(:items)).to match_array items
     end
   end
@@ -32,7 +34,7 @@ RSpec.describe ItemsController, type: :controller do
     subject { post :create, params: items_params }
 
     it 'saves the item' do
-      expect { subject }.to change(Item, :count ).by 1
+      expect { subject }.to change(Item, :count).by 1
     end
 
     it 'redirect to index' do
@@ -45,7 +47,7 @@ RSpec.describe ItemsController, type: :controller do
       end
 
       it 'doesnt save' do
-        expect { subject }.to_not change(Item, :count)
+        expect { subject }.not_to change(Item, :count)
       end
     end
   end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -10,34 +12,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_05_055657) do
-
+ActiveRecord::Schema.define(version: 20_220_105_055_657) do
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension 'plpgsql'
 
-  create_table "items", force: :cascade do |t|
-    t.string "day"
-    t.string "st1"
-    t.string "st2"
-    t.string "st3"
-    t.string "st4"
-    t.string "st5"
-    t.string "st6"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.integer "number"
+  create_table 'items', force: :cascade do |t|
+    t.string 'day'
+    t.string 'st1'
+    t.string 'st2'
+    t.string 'st3'
+    t.string 'st4'
+    t.string 'st5'
+    t.string 'st6'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
+    t.integer 'number'
+    t.index ['day'], name: 'index_items_on_day'
   end
-
-  create_table "lessons", force: :cascade do |t|
-    t.string "time"
-    t.string "mon"
-    t.string "thu"
-    t.string "wed"
-    t.string "thurs"
-    t.string "fri"
-    t.string "sat"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
 end

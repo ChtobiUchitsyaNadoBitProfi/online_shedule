@@ -1,5 +1,6 @@
-Rails.application.routes.draw do
+# frozen_string_literal: true
 
+Rails.application.routes.draw do
   resources :items do
     get :iv_821, on: :collection
     get :iv_822, on: :collection

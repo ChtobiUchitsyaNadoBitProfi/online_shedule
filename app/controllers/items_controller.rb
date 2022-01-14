@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ItemsController < ApplicationController
   skip_before_action :verify_authenticity_token
   before_action :find_item, only: %i[show edit update destroy]
@@ -5,7 +7,7 @@ class ItemsController < ApplicationController
 
   def index
     @items = Item.all.order(:number)
-    @group = ""
+    @group = ''
   end
 
   def create
@@ -41,19 +43,19 @@ class ItemsController < ApplicationController
 
   def iv_821
     @items = Item.where('number < 6').order(:number)
-    @group = "ИВ-821"
+    @group = 'ИВ-821'
     render :index
   end
 
   def iv_822
     @items = Item.where('number > 5 and number < 11').order(:number)
-    @group = "ИВ-822"
+    @group = 'ИВ-822'
     render :index
   end
 
   def iv_823
     @items = Item.where('number > 10 and number <16').order(:number)
-    @group = "ИВ-823"
+    @group = 'ИВ-823'
     render :index
   end
 
@@ -72,5 +74,4 @@ class ItemsController < ApplicationController
     true
     # render_403 unless params[:admin]
   end
-
 end
