@@ -35,5 +35,5 @@ jobs:
       - name: RSpec
         run: |
           cp config/database.ci.yml config/database.yml
-          bundle exec rails db:setup
+          bundle exec rake db:create
           bundle exec rspec
