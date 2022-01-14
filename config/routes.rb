@@ -7,5 +7,5 @@ Rails.application.routes.draw do
     get :admin, on: :collection
   end
 
-  root to: 'items#index'
+  root to: 'items#iv_821'
 end
