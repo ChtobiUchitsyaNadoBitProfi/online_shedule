@@ -7,17 +7,15 @@
  * sudo apt install postgresql
  * sudo gem install pg
  * sudo -u postgres psql -c "ALTER USER postgres PASSWORD 'postgres';"
- * sudo -u postgres createdb rails_starter_project_development
 ### Set up
  * gem install bundler
  * bundle install
+ * bundle exec rake db:create
  * rails db:migrate
- * rails db:create
 ### Rspec
- * rspec
+ * bundle exec rspec
 ### Rubocop
- * rubocop
- * rubocop -A 
+ * bundle exec rubocop
 ### Run
  * rails s
 
