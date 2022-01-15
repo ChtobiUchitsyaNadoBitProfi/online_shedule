@@ -31,6 +31,9 @@ RSpec.configure do |config|
   config.before(:suite) do
     FactoryBot.find_definitions
   end
+
+  config.include Devise::Test::ControllerHelpers, type: :view
+  config.include Devise::Test::ControllerHelpers, type: :controller
 end
 
 Shoulda::Matchers.configure do |config|
