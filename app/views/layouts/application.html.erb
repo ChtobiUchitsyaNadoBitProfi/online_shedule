@@ -11,6 +11,14 @@
   </head>
 
   <body>
-    <%= yield %>
+
+    <!-- devise -->
+      <%= render 'include/auth/auth_header' %>
+    <!-- devise -->
+
+    <div class="jumbotron vertical-center">
+        <%= render 'include/main/notification' %>
+        <%= yield %>
+    </div>
   </body>
 </html>

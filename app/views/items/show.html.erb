@@ -1,5 +1,5 @@
 <div align="center">
-  <h2 class="display-2">Shedule</h2>
+  <h2 class="display-3">Shedule</h2>
 </div>
 
 <table class="table table-striped" border="2">
@@ -37,14 +37,13 @@
 <div align="center">
   <table>
     <tr>
-      <% if @admin == true %>
-      <td><%= button_to 'Edit', edit_item_path, method: :get%></td>
+      <% if user_signed_in? %>
+        <td><%= button_to 'Edit', edit_item_path, method: :get%></td>
       <% end %>
     </tr>
   </table>
 </div>
 <br/>
-
 
 <%= render partial: 'layouts/shared/group'%>
 
